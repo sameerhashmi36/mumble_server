@@ -1,0 +1,54 @@
+Performing C++ SOURCE FILE Test COMPILER_HAS_MBIG_OBJ failed with the following output:
+Change Dir: /media/nybsysml/test/sameer/Mumble/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/nybsysml/Downloads/CLion-2022.2.4/clion-2022.2.4/bin/ninja/linux/ninja cmTC_bc11c && [1/2] Building CXX object CMakeFiles/cmTC_bc11c.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_bc11c.dir/src.cxx.o 
+/usr/bin/c++ -DCOMPILER_HAS_MBIG_OBJ  -fPIE   -Wa,-mbig-obj -std=gnu++14 -o CMakeFiles/cmTC_bc11c.dir/src.cxx.o -c /media/nybsysml/test/sameer/Mumble/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+as: unrecognized option '-mbig-obj'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }
+Determining if the function lrintf exists failed with the following output:
+Change Dir: /media/nybsysml/test/sameer/Mumble/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/nybsysml/Downloads/CLion-2022.2.4/clion-2022.2.4/bin/ninja/linux/ninja cmTC_2758e && [1/2] Building C object CMakeFiles/cmTC_2758e.dir/CheckFunctionExists.c.o
+<command-line>: warning: conflicting types for built-in function ‘lrintf’; expected ‘long int(float)’ [-Wbuiltin-declaration-mismatch]
+/home/nybsysml/Downloads/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/nybsysml/Downloads/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.c:1:1: note: ‘lrintf’ is declared in header ‘<math.h>’
+  +++ |+#include <math.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+[2/2] Linking C executable cmTC_2758e
+FAILED: cmTC_2758e 
+: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=lrintf  CMakeFiles/cmTC_2758e.dir/CheckFunctionExists.c.o -o cmTC_2758e   && :
+/usr/bin/ld: CMakeFiles/cmTC_2758e.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `lrintf'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function lrint exists failed with the following output:
+Change Dir: /media/nybsysml/test/sameer/Mumble/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/nybsysml/Downloads/CLion-2022.2.4/clion-2022.2.4/bin/ninja/linux/ninja cmTC_dddf1 && [1/2] Building C object CMakeFiles/cmTC_dddf1.dir/CheckFunctionExists.c.o
+<command-line>: warning: conflicting types for built-in function ‘lrint’; expected ‘long int(double)’ [-Wbuiltin-declaration-mismatch]
+/home/nybsysml/Downloads/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/nybsysml/Downloads/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.c:1:1: note: ‘lrint’ is declared in header ‘<math.h>’
+  +++ |+#include <math.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+[2/2] Linking C executable cmTC_dddf1
+FAILED: cmTC_dddf1 
+: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=lrint  CMakeFiles/cmTC_dddf1.dir/CheckFunctionExists.c.o -o cmTC_dddf1   && :
+/usr/bin/ld: CMakeFiles/cmTC_dddf1.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `lrint'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
